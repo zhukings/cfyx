@@ -3,24 +3,38 @@
 
 let mytoken= 'auto';//快速订阅访问入口, 留空则不启动快速订阅
 
-// 设置优选地址，不带端口号默认443，不支持非TLS订阅生成
+// 设置优选地址，不带端口号默认8443，不支持非TLS订阅生成
 let addresses = [
-	'icook.tw:2053#优选域名',
-	'cloudflare.cfgo.cc#优选官方线路',
+	'cloudflare.cfgo.cc#CF优选',
+	'cf.090227.xyz:443#CM优选',
+	'cfip.xxxxxxxx.tk:8443#OTC优选',
+
+	
 ];
 
 // 设置优选地址api接口
 let addressesapi = [
-	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt' //可参考内容格式 自行搭建。
+	'https://raw.githubusercontent.com/zhukings/cf-rule/main/addressesapi.txt',
+	'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressesapi.txt',
+	'https://addressesapi.090227.xyz/CloudFlareYes',
+	'https://addressesapi.090227.xyz/ct',
+	'https://addressesapi.090227.xyz/cmcc',
+
+	
+
 ];
 
-let DLS = 4;//速度下限
+let DLS = 20;//速度下限
 let addressescsv = [
-	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv' //iptest测速结果文件。
+	//'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressescsv.csv' //iptest测速结果文件。
+	'https://raw.githubusercontent.com/zhukings/cf-rule/main/31898-1709485549.csv',
+	'https://raw.githubusercontent.com/zhukings/cf-rule/main/396982-1709487927.csv',
+	'https://raw.githubusercontent.com/zhukings/cf-rule/main/45102-1709485217.csv',
+
 ];
 
-let subconverter = "api.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
-let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //订阅配置文件
+let subconverter = "psub.zhukings.workers.dev"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
+let subconfig = "https://raw.githubusercontent.com/zhukings/cf-rule/main/config/ACL4SSR_vless.ini"; //订阅配置文件
 
 let link = '';
 let edgetunnel = 'ed';
@@ -31,14 +45,15 @@ let proxyIPs = [
 	'proxyip.vultr.fxxk.dedyn.io',
 ];
 let CMproxyIPs = [
-	{ proxyIP: "proxyip.fxxk.dedyn.io", type: "HK" },
+	//{ proxyIP: "proxyip.fxxk.dedyn.io", type: "US" },
+	{ proxyIP: "proxyip.hk.fxxk.dedyn.io", type: "HK" },
 ];
 let BotToken ='';
 let ChatID =''; 
 let proxyhosts = [//本地代理域名池
 	//'ppfv2tl9veojd-maillazy.pages.dev',
 ];
-let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//在线代理域名池URL
+let proxyhostsURL = 'https://raw.githubusercontent.com/zhukings/CFcdnVmess2sub/main/proxyhosts';//在线代理域名池URL
 let EndPS = '';//节点名备注内容
 
 async function sendMessage(type, ip, add_data = "") {
@@ -332,7 +347,7 @@ export default {
 			const uniqueAddresses = [...new Set(addresses)];
 			
 			const responseBody = uniqueAddresses.map(address => {
-				let port = "443";
+				let port = "8443";
 				let addressid = address;
 			
 				if (address.includes(':') && address.includes('#')) {
@@ -387,7 +402,7 @@ export default {
 				if(proxyhosts && (host.includes('workers.dev') || host.includes('pages.dev'))) {
 					最终路径 = `/${host}${path}`;
 					伪装域名 = proxyhosts[Math.floor(Math.random() * proxyhosts.length)];
-					节点备注 = `${EndPS} 已启用临时域名中转服务，请尽快绑定自定义域！`;
+					节点备注 = `${EndPS}`;
 				}
 				const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=tls&sni=${伪装域名}&fp=random&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
 			

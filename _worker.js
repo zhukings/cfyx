@@ -16,7 +16,7 @@ let addresses = [
 let addressesapi = [
 	'https://raw.githubusercontent.com/zhukings/cf-rule/main/addressesapi.txt',
 	'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressesapi.txt',
-	'https://addressesapi.090227.xyz/CloudFlareYes',
+//	'https://addressesapi.090227.xyz/CloudFlareYes',
 	'https://addressesapi.090227.xyz/ct',
 	'https://addressesapi.090227.xyz/cmcc',
 

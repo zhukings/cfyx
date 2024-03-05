@@ -41,15 +41,20 @@ let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [
 	'proxyip.aliyun.fxxk.dedyn.io',
-	'proxyip.multacom.fxxk.dedyn.io',
+	'proxyip.sg.fxxk.dedyn.io',
 	'proxyip.kr.fxxk.dedyn.io',
 	'proxyip.oracle.fxxk.dedyn.io',
 	'proxyip.jp.fxxk.dedyn.io',
 	'proxyip.us.fxxk.dedyn.io',
+	'proxyip.digitalocean.fxxk.dedyn.io',
 ];
 let CMproxyIPs = [
 	//{ proxyIP: "proxyip.fxxk.dedyn.io", type: "US" },
-	{ proxyIP: "proxyip.hk.fxxk.dedyn.io", type: "HK" },
+	{ proxyIP: "proxyip.oracle.fxxk.dedyn.io", type: "HK" },
+	{ proxyIP: "proxyip.us.fxxk.dedyn.io", type: "US" },
+	{ proxyIP: "proxyip.jp.fxxk.dedyn.io", type: "JP" },
+	{ proxyIP: "proxyip.kr.fxxk.dedyn.io", type: "KR" },
+	{ proxyIP: "proxyip.sg.fxxk.dedyn.io", type: "SG" },
 ];
 let BotToken ='';
 let ChatID =''; 

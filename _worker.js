@@ -3,13 +3,11 @@
 
 let mytoken= 'auto';//快速订阅访问入口, 留空则不启动快速订阅
 
-// 设置优选地址，不带端口号默认8443，不支持非TLS订阅生成
+// 设置优选地址，不带端口号默认443，不支持非TLS订阅生成
 let addresses = [
 	'cloudflare.cfgo.cc#CF优选',
 	'cf.090227.xyz:443#CM优选',
 	'cfip.xxxxxxxx.tk:8443#OTC优选',
-
-	
 ];
 
 // 设置优选地址api接口
@@ -19,9 +17,6 @@ let addressesapi = [
 //	'https://addressesapi.090227.xyz/CloudFlareYes',
 	'https://addressesapi.090227.xyz/ct',
 	'https://addressesapi.090227.xyz/cmcc',
-
-	
-
 ];
 
 let DLS = 20;//速度下限
@@ -356,7 +351,7 @@ export default {
 			const uniqueAddresses = [...new Set(addresses)];
 			
 			const responseBody = uniqueAddresses.map(address => {
-				let port = "8443";
+				let port = "443";
 				let addressid = address;
 			
 				if (address.includes(':') && address.includes('#')) {
@@ -411,7 +406,7 @@ export default {
 				if(proxyhosts && (host.includes('workers.dev') || host.includes('pages.dev'))) {
 					最终路径 = `/${host}${path}`;
 					伪装域名 = proxyhosts[Math.floor(Math.random() * proxyhosts.length)];
-					节点备注 = `${EndPS}`;
+					节点备注 = `${EndPS} 已启用临时域名中转服务，请尽快绑定自定义域！`;
 				}
 				const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=tls&sni=${伪装域名}&fp=random&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
 			

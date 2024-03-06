@@ -29,7 +29,8 @@ let addressescsv = [
 ];
 
 let subconverter = "psub.zhukings.workers.dev"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
-let subconfig = "https://raw.githubusercontent.com/zhukings/cf-rule/main/config/ACL4SSR_vless.ini"; //订阅配置文件
+//let subconfig = "https://raw.githubusercontent.com/zhukings/cf-rule/main/config/ACL4SSR_vless.ini"; //订阅配置文件
+let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini";
 
 let link = '';
 let edgetunnel = 'ed';

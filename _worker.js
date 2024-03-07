@@ -180,8 +180,8 @@ export default {
 		let path = "";
 
 		if (mytoken !== '' && url.pathname.includes(mytoken)) {
-			host = env.HOST || "edgetunnel-2z2.pages.dev";
-			uuid = env.UUID || "30e9c5c8-ed28-4cd9-b008-dc67277f8b02";
+			host = env.HOST || "cf.hc.dns-dynamic.net";
+			uuid = env.UUID || "ba5cb3a5-9e52-4309-b49e-be84e8c05fd8";
 			path = env.PATH || "/?ed=2048";
 			edgetunnel = env.ED || edgetunnel;
 			RproxyIP = env.RPROXYIP || RproxyIP;

@@ -5,9 +5,8 @@ let mytoken= 'auto';//快速订阅访问入口, 留空则不启动快速订阅
 
 // 设置优选地址，不带端口号默认443，不支持非TLS订阅生成
 let addresses = [
-	'cloudflare.cfgo.cc#CF优选',
-	'cf.090227.xyz:443#CM优选',
-	'cfip.xxxxxxxx.tk:8443#OTC优选',
+	'icook.tw:2053#优选域名',
+	'cloudflare.cfgo.cc#优选官方线路',
 ];
 
 // 设置优选地址api接口
@@ -25,7 +24,6 @@ let addressescsv = [
 	'https://raw.githubusercontent.com/zhukings/cf-rule/main/31898-1709485549.csv',
 	'https://raw.githubusercontent.com/zhukings/cf-rule/main/396982-1709487927.csv',
 	'https://raw.githubusercontent.com/zhukings/cf-rule/main/45102-1709485217.csv',
-
 ];
 
 let subconverter = "psub.zhukings.workers.dev"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
@@ -36,23 +34,14 @@ let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [
 	'proxyip.aliyun.fxxk.dedyn.io',
-	'proxyip.sg.fxxk.dedyn.io',
-	'proxyip.kr.fxxk.dedyn.io',
-	'proxyip.oracle.fxxk.dedyn.io',
-	'proxyip.jp.fxxk.dedyn.io',
-	'proxyip.us.fxxk.dedyn.io',
-	'proxyip.digitalocean.fxxk.dedyn.io',
+	'proxyip.multacom.fxxk.dedyn.io',
+	'proxyip.vultr.fxxk.dedyn.io',
 ];
 let CMproxyIPs = [
-	//{ proxyIP: "proxyip.fxxk.dedyn.io", type: "US" },
-	{ proxyIP: "proxyip.oracle.fxxk.dedyn.io", type: "HK" },
-	{ proxyIP: "proxyip.us.fxxk.dedyn.io", type: "US" },
-	{ proxyIP: "proxyip.jp.fxxk.dedyn.io", type: "JP" },
-	{ proxyIP: "proxyip.kr.fxxk.dedyn.io", type: "KR" },
-	{ proxyIP: "proxyip.sg.fxxk.dedyn.io", type: "SG" },
+	{ proxyIP: "proxyip.fxxk.dedyn.io", type: "HK" },
 ];
-let BotToken ='7144673362:AAFL8oudehfjWr_oDVCYhcJELIYmiRRJ9TU';
-let ChatID ='6496307884'; 
+let BotToken ='';
+let ChatID =''; 
 let proxyhosts = [//本地代理域名池
 	//'ppfv2tl9veojd-maillazy.pages.dev',
 ];

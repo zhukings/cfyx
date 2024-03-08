@@ -8,6 +8,7 @@ let addresses = [
 	'cloudflare.cfgo.cc:8443#CF优选',
 	'cf.090227.xyz:443#CM优选',
 	'cfip.xxxxxxxx.tk:8443#OTC优选',
+	'proxy.xxxxxxxx.tk:8443#OTC反代',
 	
 	'acsg3.cloudflarest.link:2053#acsg3',
 	'acjp2.cloudflarest.link:2053#acip2',

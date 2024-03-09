@@ -16,7 +16,6 @@ let addresses = [
 	
 	'bestcf.onecf.eu.org:2053#TG官方',
 	'yxip.edmero.top:2053#新加坡域名',
-	'acsg3.cloudflarest.link:2053#acsg3',
 //	'acsg.cloudflarest.1ink:2853#acsg',
 	
 ];

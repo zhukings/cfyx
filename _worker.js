@@ -62,7 +62,7 @@ let EndPS = '';//节点名备注内容
 
 let FileName = 'vless2sub';
 let SUBUpdateTime = 6; 
-let total = 99;//PB
+let total = Infinity;//PB
 //let timestamp = now;
 let timestamp = 4102329600000;//2099-12-31
 

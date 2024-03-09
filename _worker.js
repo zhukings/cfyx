@@ -10,13 +10,10 @@ let addresses = [
 	'cfip.xxxxxxxx.tk:8443#OTC优选',
 	'proxy.xxxxxxxx.tk:8443#OTC反代',
 	
-//	'acsg3.cloudflarest.link:2053#SG优选',
+//	'acsg3.cloudflarest.link:2053#SG',
 	'acjp2.cloudflarest.link:2053#JP优选',
-//	'bestproxy.onecf.eu.org:2996#TG反代',
-	
 	'bestcf.onecf.eu.org:2053#TG官方',
-	'yxip.edmero.top:2053#新加坡域名',
-//	'acsg.cloudflarest.1ink:2853#acsg',
+	'yxip.edmero.top:2053#SG优选'，
 	
 ];
 

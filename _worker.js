@@ -14,7 +14,6 @@ let addresses = [
 	'acjp2.cloudflarest.link:2053#JP优选',
 	'bestcf.onecf.eu.org:2053#TG官方',
 	'yxip.edmero.top:2053#SG优选',
-	'c.xf.free.hr:2083#US-Channel',
 	
 ];
 

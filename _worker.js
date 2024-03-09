@@ -13,7 +13,7 @@ let addresses = [
 //	'acsg3.cloudflarest.link:2053#SG',
 	'acjp2.cloudflarest.link:2053#JP优选',
 	'bestcf.onecf.eu.org:2053#TG官方',
-	'yxip.edmero.top:2053#SG优选'，
+	'yxip.edmero.top:2053#SG优选',
 	
 ];
 

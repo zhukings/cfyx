@@ -5,14 +5,11 @@ let mytoken= 'auto';//快速订阅访问入口, 留空则不启动快速订阅
 
 // 设置优选地址，不带端口号默认443，不支持非TLS订阅生成
 let addresses = [
-	'cloudflare.cfgo.cc:8443#CF优选',
-	'cf.090227.xyz:443#CM优选',
+	'icook.tw:2053#优选域名',
+	'cloudflare.cfgo.cc#优选官方线路',
 	'cfip.xxxxxxxx.tk:8443#OTC优选',
 	'proxy.xxxxxxxx.tk:8443#OTC反代',
-	
-//	'acsg3.cloudflarest.link:2053#SG',
 	'acjp2.cloudflarest.link:2053#JP优选',
-	'bestcf.onecf.eu.org:2053#TG官方',
 	'yxip.edmero.top:2053#SG优选',
 	
 ];

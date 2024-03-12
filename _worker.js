@@ -23,7 +23,7 @@ let addressesapi = [
 	'https://addressesapi.090227.xyz/cmcc',
 ];
 
-let DLS = 20;//速度下限
+let DLS = 15;//速度下限
 let addressescsv = [
 	//'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressescsv.csv' //iptest测速结果文件。
 	'https://raw.githubusercontent.com/zhukings/cf-rule/main/31898-1709485549.csv',

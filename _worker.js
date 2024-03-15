@@ -9,8 +9,6 @@ let addresses = [
 //	'cloudflare.cfgo.cc#优选官方线路',
 	'cfip.xxxxxxxx.tk:8443#OTC优选',
 	'proxy.xxxxxxxx.tk:8443#OTC反代',
-//	'acjp2.cloudflarest.link:2053#JP优选',
-	'yxip.edmero.top:2053#SG优选',
 	
 ];
 

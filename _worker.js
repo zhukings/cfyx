@@ -13,9 +13,9 @@ let addresses = [
 
 // 设置优选地址api接口
 let addressesapi = [
-//	'https://raw.githubusercontent.com/zhukings/cf-rule/main/yxip.txt',
+  	'https://raw.githubusercontent.com/zhukings/cf-rule/main/yxip.txt',
 //	'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressesapi.txt',
-//	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt',
+  	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt',
 //	'https://addressesapi.090227.xyz/CloudFlareYes',
   	'https://addressesapi.090227.xyz/ct',
 //	'https://addressesapi.090227.xyz/cmcc',

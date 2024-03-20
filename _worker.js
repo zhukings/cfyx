@@ -25,7 +25,7 @@ let DLS = 8;//速度下限
 let addressescsv = [
 	//'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressescsv.csv' //iptest测速结果文件。
 
-	  'https://raw.githubusercontent.com/zhukings/cf-rule/main/addressescsv.csv' //iptest测速结果文件。
+	 'https://raw.githubusercontent.com/zhukings/cf-rule/main/addressescsv.csv',
 
 
 //	'https://raw.githubusercontent.com/zhukings/cf-rule/main/31898-1709485549.csv',

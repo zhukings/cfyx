@@ -13,20 +13,24 @@ let addresses = [
 
 // 设置优选地址api接口
 let addressesapi = [
-	'https://raw.githubusercontent.com/zhukings/cf-rule/main/yxip.txt',
+//	'https://raw.githubusercontent.com/zhukings/cf-rule/main/yxip.txt',
 //	'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressesapi.txt',
-	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt',
+//	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt',
 //	'https://addressesapi.090227.xyz/CloudFlareYes',
-	'https://addressesapi.090227.xyz/ct',
+//	'https://addressesapi.090227.xyz/ct',
 //	'https://addressesapi.090227.xyz/cmcc',
 ];
 
-let DLS = 15;//速度下限
+let DLS = 8;//速度下限
 let addressescsv = [
 	//'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressescsv.csv' //iptest测速结果文件。
-	'https://raw.githubusercontent.com/zhukings/cf-rule/main/31898-1709485549.csv',
-	'https://raw.githubusercontent.com/zhukings/cf-rule/main/396982-1709487927.csv',
-	'https://raw.githubusercontent.com/zhukings/cf-rule/main/45102-1709485217.csv',
+
+	  'https://raw.githubusercontent.com/zhukings/cf-rule/main/addressescsv.csv' //iptest测速结果文件。
+
+
+//	'https://raw.githubusercontent.com/zhukings/cf-rule/main/31898-1709485549.csv',
+//	'https://raw.githubusercontent.com/zhukings/cf-rule/main/396982-1709487927.csv',
+//	'https://raw.githubusercontent.com/zhukings/cf-rule/main/45102-1709485217.csv',
 ];
 
 let subconverter = "psub.zhukings.workers.dev"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub

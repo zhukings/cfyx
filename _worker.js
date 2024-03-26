@@ -8,6 +8,14 @@ let addresses = [
 //	'icook.tw:2053#优选域名',
 //	'cloudflare.cfgo.cc#优选官方线路',
 //	'proxy.xxxxxxxx.tk:8443#OTC反代',
+   "go.inmobi.com#CFW-BOT",
+	"creativecommons.org#2ri4eUI",
+	"go.inmobi.com:8443#CFW-BOT",
+	"creativecommons.org:8443#2ri4eUI",
+	"go.inmobi.com:2087#CFW-BOT",
+	"creativecommons.org:2087#2ri4eUI",
+	"go.inmobi.com:2096#CFW-BOT",
+	"creativecommons.org:2096#2ri4eUI",
 ];
 
 // 设置优选地址api接口

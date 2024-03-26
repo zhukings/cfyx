@@ -17,7 +17,7 @@ let addressesapi = [
 //  	'https://cf-text.pages.dev/bp.txt?token=xy',
 	'https://cf-text.pages.dev/ip.txt?token=xy',
 //	'https://cf-text.pages.dev/tc.txt?token=xy',
-	'https://gist.githubusercontent.com/zhukings/19c9ae6ac8ad16cfa91696a455737901/raw/cf.txt',
+	'https://cf-text.pages.dev/cf.txt?token=xy',
 
 //	'https://raw.githubusercontent.com/zhukings/vless2sub/main/addressesapi.txt',
 //  	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt',

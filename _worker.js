@@ -21,7 +21,7 @@ let addresses = [
 // 设置优选地址api接口
 let addressesapi = [
 //	'https://raw.githubusercontent.com/zhukings/cf-rule/main/yxip.txt',
-//  'https://cf-text.pages.dev/bp.txt?token=xy',
+//  	'https://cf-text.pages.dev/bp.txt?token=xy',
 	'https://cf-text.pages.dev/ip.txt?token=xy',
 //	'https://cf-text.pages.dev/tc.txt?token=xy',
 //	'https://cf-text.pages.dev/cf.txt?token=xy',
@@ -423,8 +423,8 @@ export default {
 						}
 					} else {
 						address = match[1];
-						port = match[2];
-						addressid = match[3];
+						port = match[2] || port;
+						addressid = match[3] || address;
 					}
 	
 					//console.log(address, port, addressid);
@@ -486,8 +486,8 @@ export default {
 					}
 				} else {
 					address = match[1];
-					port = match[2];
-					addressid = match[3];
+					port = match[2] || port;
+					addressid = match[3] || address;
 				}
 
 				//console.log(address, port, addressid);

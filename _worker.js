@@ -1,21 +1,12 @@
 
 // 部署完成后在网址后面加上这个，获取订阅器默认节点，/auto
 
-let mytoken= 'auto';//快速订阅访问入口, 留空则不启动快速订阅
+let mytoken= ['auto', 'auto2'];//快速订阅访问入口, 留空则不启动快速订阅
 
-// 设置优选地址，不带端口号默认443，不支持非TLS订阅生成
+// 设置优选地址，不带端口号默认443，TLS订阅生成
 let addresses = [
-//	'icook.tw:2053#优选域名',
-//	'cloudflare.cfgo.cc#优选官方线路',
-//	'proxy.xxxxxxxx.tk:8443#OTC反代',
-   	"go.inmobi.com#CFW-BOT",
-	"creativecommons.org#2ri4eUI",
-	"go.inmobi.com:8443#CFW-BOT",
-	"creativecommons.org:8443#2ri4eUI",
-	"go.inmobi.com:2087#CFW-BOT",
-	"creativecommons.org:2087#2ri4eUI",
-	"go.inmobi.com:2096#CFW-BOT",
-	"creativecommons.org:2096#2ri4eUI",
+	'icook.tw:2053#官方优选域名',
+	'cloudflare.cfgo.cc#优选官方线路',
 ];
 
 // 设置优选地址api接口
@@ -26,7 +17,67 @@ let addressesapi = [
 //	'https://cf-text.pages.dev/tc.txt?token=xy',
 //	'https://cf-text.pages.dev/cf.txt?token=xy',
 	'https://cf-text.pages.dev/loc.txt?token=xy',
+];
 
+// 设置优选地址，不带端口号默认80，noTLS订阅生成
+let addressesnotls = [
+		//'www.visa.com.sg#官方优选域名',
+	//'www.wto.org:8080#官方优选域名',
+//	'www.who.int:8880#官方优选域名',
+	'time.cloudflare.com:80#官方优选域名',
+'shopify.com:80#官方优选域名',
+'time.is:80#官方优选域名',
+'icook.hk:80#官方优选域名',
+'icook.tw:80#官方优选域名',
+'ip.sb:80#官方优选域名',
+'japan.com:80#官方优选域名',
+'malaysia.com:80#官方优选域名',
+'russia.com:80#官方优选域名',
+'singapore.com:80#官方优选域名',
+'skk.moe:80#官方优选域名',
+'www.visa.com:80#官方优选域名',
+'www.visa.com.sg:80#官方优选域名',
+'www.visa.com.hk:80#官方优选域名',
+'www.visa.com.tw:80#官方优选域名',
+'www.visa.co.jp:80#官方优选域名',
+'www.visakorea.com:80#官方优选域名',
+'www.gco.gov.qa:80#官方优选域名',
+'www.gov.se:80#官方优选域名',
+'www.gov.ua:80#官方优选域名',
+'www.digitalocean.com:80#官方优选域名',
+'www.csgo.com:80#官方优选域名',
+'www.shopify.com:80#官方优选域名',
+'www.whoer.net:80#官方优选域名',
+'www.whatismyip.com:80#官方优选域名',
+'www.ipget.net:80#官方优选域名',
+'www.hugedomains.com:80#官方优选域名',
+'www.udacity.com:80#官方优选域名',
+'www.4chan.org:80#官方优选域名',
+'www.okcupid.com:80#官方优选域名',
+'www.glassdoor.com:80#官方优选域名',
+'www.udemy.com:80#官方优选域名',
+'www.baipiao.eu.org:80#官方优选域名',
+'cdn.anycast.eu.org:80#官方优选域名',
+'cdn-all.xn--b6gac.eu.org:80#官方优选域名',
+'cdn-b100.xn--b6gac.eu.org:80#官方优选域名',
+'xn--b6gac.eu.org:80#官方优选域名',
+'edgetunnel.anycast.eu.org:80#官方优选域名',
+'alejandracaiccedo.com:80#官方优选域名',
+'nc.gocada.co:80#官方优选域名',
+'log.bpminecraft.com:80#官方优选域名',
+'www.boba88slot.com:80#官方优选域名',
+'gur.gov.ua:80#官方优选域名',
+'www.zsu.gov.ua:80#官方优选域名',
+'www.iakeys.com:80#官方优选域名',
+'edtunnel-dgp.pages.dev:80#官方优选域名',
+'www.d-555.com:80#官方优选域名',
+'fbi.gov:80#官方优选域名',
+'www.visa.com.sg:80#官方优选域名',
+];
+
+// 设置优选noTLS地址api接口
+let addressesnotlsapi = [
+	'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/addressesapi.txt',
 ];
 
 let DLS = 10;//速度下限
@@ -41,12 +92,9 @@ let addressescsv = [
 //	'https://raw.githubusercontent.com/zhukings/cf-rule/main/45102-1709485217.csv',
 ];
 
-let subconverter = "api.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
-let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //订阅配置文件
-let addressesnotls = [];
-let addressesnotlsapi = [
-	'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/addressesapi.txt',
-];
+let subconverter = "apiurl.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
+let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //订阅转换配置文件
+let noTLS = false; //改为 true , 将不做域名判断 始终返回noTLS节点
 let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'false';
@@ -199,7 +247,7 @@ async function getAddressescsv(tls) {
 let protocol;
 export default {
 	async fetch (request, env) {
-		mytoken = env.TOKEN || mytoken;
+		mytoken = env.TOKEN.split(',') || mytoken;
 		BotToken = env.TGTOKEN || BotToken;
 		ChatID = env.TGID || ChatID; 
 		subconverter = env.SUBAPI || subconverter;
@@ -215,7 +263,7 @@ export default {
 		total = total * 1099511627776 * 1024;
 		let expire= Math.floor(timestamp / 1000) ;
 
-		if (mytoken !== '' && url.pathname.includes(mytoken)) {
+		if (mytoken.length > 0 && mytoken.some(token => url.pathname.includes(token))) {
 			host = env.HOST || "edgetunnel-2z2.pages.dev";
 			uuid = env.UUID || "b7a392e2-4ef0-4496-90bc-1c37bb234904";
 			path = env.PATH || "/?ed=2048";
@@ -300,7 +348,9 @@ export default {
 				path = (path[0] === '/') ? path : '/' + path;
 			}
 		}
-
+		
+		noTLS = env.NOTLS || host.toLowerCase().includes('notls') || host.toLowerCase().includes('worker') || host.toLowerCase().includes('trycloudflare') || noTLS;
+		
 		if (userAgent.includes('telegram') || userAgent.includes('twitter') || userAgent.includes('miaoko')) {
 			return new Response('Hello World!');
 		} else if ((userAgent.includes('clash') || (format === 'clash' && !userAgent.includes('subconverter'))) && !userAgent.includes('nekobox')) {
@@ -389,7 +439,7 @@ export default {
 			const uniqueAddresses = [...new Set(addresses)];
 			
 			let notlsresponseBody;
-			if(host.includes('notls') || host.includes('trycloudflare')){
+			if(noTLS == true){
 				const newAddressesnotlsapi = await getAddressesapi(addressesnotlsapi);
 				const newAddressesnotlscsv = await getAddressescsv('FALSE');
 				addressesnotls = addressesnotls.concat(newAddressesnotlsapi);
@@ -453,7 +503,7 @@ export default {
 					}
 				}
 
-					const vlessLink = `vless://${uuid}@${address}:${port}?security=&type=ws&host=${host}&path=${encodeURIComponent(path)}#${encodeURIComponent(addressid)}`;
+					const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=&type=ws&host=${host}&path=${encodeURIComponent(path)}#${encodeURIComponent(addressid)}`;
 			
 					return vlessLink;
 				}).join('\n');
